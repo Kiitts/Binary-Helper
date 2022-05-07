@@ -55,6 +55,7 @@ namespace Binary_Helper
             // 
             // fromConvertText
             // 
+            this.fromConvertText.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fromConvertText.Location = new System.Drawing.Point(13, 40);
             this.fromConvertText.Multiline = true;
             this.fromConvertText.Name = "fromConvertText";
@@ -63,6 +64,7 @@ namespace Binary_Helper
             // 
             // toConvertText
             // 
+            this.toConvertText.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toConvertText.Location = new System.Drawing.Point(13, 262);
             this.toConvertText.Multiline = true;
             this.toConvertText.Name = "toConvertText";
