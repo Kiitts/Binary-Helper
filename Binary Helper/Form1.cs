@@ -44,6 +44,9 @@ namespace Binary_Helper
             ClearTexts();
         }
             // Start Clear Buttons: Support function
+        /// <summary>
+        /// clear the two text box
+        /// </summary>
         private void ClearTexts()
         {
             fromConvertText.Text = "";
@@ -103,6 +106,9 @@ namespace Binary_Helper
         }
 
             // Start Convert Button: Supporting Function
+        /// <summary>
+        /// make two of the textbox content swap
+        /// </summary>
         private void SwapText()
         {
             recentChange = true;
