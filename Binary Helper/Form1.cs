@@ -96,7 +96,7 @@ namespace Binary_Helper
                 }
                 else
                 {
-                    ClearTexts();
+                    toConvertText.Text = "";
                 }
             }
             lastToSelected = toConvertList.SelectedIndex;
