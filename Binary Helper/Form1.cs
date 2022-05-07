@@ -157,6 +157,47 @@ namespace Binary_Helper
                         "Error Box");
                 }
             }
+
+            else if (fromConvertList.SelectedIndex == 1 && toConvertList.SelectedIndex == 2)
+            {
+                // convert binary to octal
+                try
+                {
+                    toConvertText.Text = converter.NumberSytemConvert(fromConvertText.Text,
+                        2, 8, 8, 3);
+                }
+                catch (System.ArgumentOutOfRangeException)
+                {
+                    MessageBox.Show("You did not input proper binary.", "Error Box");
+                    fromConvertText.Text = "";
+                }
+                catch (System.FormatException)
+                {
+                    MessageBox.Show("Your binary has a letter or other number other than 1 and 0",
+                        "Error Box");
+                }
+            }
+
+            else if (fromConvertList.SelectedIndex == 1 && toConvertList.SelectedIndex == 3)
+            {
+                // convert binary to hexadecimal
+                try
+                {
+                    toConvertText.Text = converter.NumberSytemConvert(fromConvertText.Text,
+                        2, 16, 8, 2);
+                }
+                catch (System.ArgumentOutOfRangeException)
+                {
+                    MessageBox.Show("You did not input proper hexadecimal.", "Error Box");
+                    fromConvertText.Text = "";
+                }
+                catch (System.FormatException)
+                {
+                    MessageBox.Show("One or more of your inputted character is not allowed.",
+                        "Error Box");
+                }
+            }
+
             else if(fromConvertList.SelectedIndex == 2 && toConvertList.SelectedIndex == 0)
             {
                 // convert octal to text
@@ -175,25 +216,8 @@ namespace Binary_Helper
                         "Error Box");
                 }
             }
-            else if (fromConvertList.SelectedIndex == 3 && toConvertList.SelectedIndex == 0)
-            {
-                // convert hexadecimal to text
-                try
-                {
-                    toConvertText.Text = converter.BinToText(fromConvertText.Text, 16, 2);
-                }
-                catch (System.ArgumentOutOfRangeException)
-                {
-                    MessageBox.Show("You did not input proper hexadecimal.", "Error Box");
-                    fromConvertText.Text = "";
-                }
-                catch (System.FormatException)
-                {
-                    MessageBox.Show("One or more of your inputted character is not allowed.",
-                        "Error Box");
-                }
-            }
-            else if(fromConvertList.SelectedIndex == 2 && toConvertList.SelectedIndex == 1)
+
+            else if (fromConvertList.SelectedIndex == 2 && toConvertList.SelectedIndex == 1)
             {
                 // convert octal to binary
                 try
@@ -212,22 +236,82 @@ namespace Binary_Helper
                         "Error Box");
                 }
             }
-            else if(fromConvertList.SelectedIndex == 1 && toConvertList.SelectedIndex == 2)
+
+            else if (fromConvertList.SelectedIndex == 2 && toConvertList.SelectedIndex == 3)
             {
-                // convert binary to octal
+                // convert octal to hexadecimal
                 try
                 {
                     toConvertText.Text = converter.NumberSytemConvert(fromConvertText.Text,
-                        2, 8, 8, 3);
+                        8, 16, 3, 2);
                 }
                 catch (System.ArgumentOutOfRangeException)
                 {
-                    MessageBox.Show("You did not input proper binary.", "Error Box");
+                    MessageBox.Show("You did not input proper hexadecimal.", "Error Box");
                     fromConvertText.Text = "";
                 }
                 catch (System.FormatException)
                 {
-                    MessageBox.Show("Your binary has a letter or other number other than 1 and 0",
+                    MessageBox.Show("One or more of your inputted character is not allowed.",
+                        "Error Box");
+                }
+            }
+
+            else if (fromConvertList.SelectedIndex == 3 && toConvertList.SelectedIndex == 0)
+            {
+                // convert hexadecimal to text
+                try
+                {
+                    toConvertText.Text = converter.BinToText(fromConvertText.Text, 16, 2);
+                }
+                catch (System.ArgumentOutOfRangeException)
+                {
+                    MessageBox.Show("You did not input proper hexadecimal.", "Error Box");
+                    fromConvertText.Text = "";
+                }
+                catch (System.FormatException)
+                {
+                    MessageBox.Show("One or more of your inputted character is not allowed.",
+                        "Error Box");
+                }
+            }
+
+            else if (fromConvertList.SelectedIndex == 3 && toConvertList.SelectedIndex == 1)
+            {
+                // convert hexadecimal to binary
+                try
+                {
+                    toConvertText.Text = converter.NumberSytemConvert(fromConvertText.Text,
+                        16, 2, 2, 8);
+                }
+                catch (System.ArgumentOutOfRangeException)
+                {
+                    MessageBox.Show("You did not input proper hexadecimal.", "Error Box");
+                    fromConvertText.Text = "";
+                }
+                catch (System.FormatException)
+                {
+                    MessageBox.Show("One or more of your inputted character is not allowed.",
+                        "Error Box");
+                }
+            }
+
+            else if (fromConvertList.SelectedIndex == 3 && toConvertList.SelectedIndex == 2)
+            {
+                // convert hexadecimal to octal
+                try
+                {
+                    toConvertText.Text = converter.NumberSytemConvert(fromConvertText.Text,
+                        16, 8, 2, 3);
+                }
+                catch (System.ArgumentOutOfRangeException)
+                {
+                    MessageBox.Show("You did not input proper hexadecimal.", "Error Box");
+                    fromConvertText.Text = "";
+                }
+                catch (System.FormatException)
+                {
+                    MessageBox.Show("One or more of your inputted character is not allowed.",
                         "Error Box");
                 }
             }
