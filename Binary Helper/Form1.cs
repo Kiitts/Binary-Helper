@@ -134,6 +134,11 @@ namespace Binary_Helper
                 // convert text to octal
                 toConvertText.Text = converter.TextToBin(fromConvertText.Text, 8, 3);
             }
+            else if (fromConvertList.SelectedIndex == 0 && toConvertList.SelectedIndex == 3)
+            {
+                // convert text to hexadecimal
+                toConvertText.Text = converter.TextToBin(fromConvertText.Text, 16, 2);
+            }
             else if(fromConvertList.SelectedIndex == 1 && toConvertList.SelectedIndex == 0)
             {
                 // convert binary to text
@@ -167,6 +172,24 @@ namespace Binary_Helper
                 catch (System.FormatException)
                 {
                     MessageBox.Show("Your octal number has exceed 7 or it has letter on it",
+                        "Error Box");
+                }
+            }
+            else if (fromConvertList.SelectedIndex == 3 && toConvertList.SelectedIndex == 0)
+            {
+                // convert hexadecimal to text
+                try
+                {
+                    toConvertText.Text = converter.BinToText(fromConvertText.Text, 16, 2);
+                }
+                catch (System.ArgumentOutOfRangeException)
+                {
+                    MessageBox.Show("You did not input proper hexadecimal.", "Error Box");
+                    fromConvertText.Text = "";
+                }
+                catch (System.FormatException)
+                {
+                    MessageBox.Show("One or more of your inputted character is not allowed.",
                         "Error Box");
                 }
             }
