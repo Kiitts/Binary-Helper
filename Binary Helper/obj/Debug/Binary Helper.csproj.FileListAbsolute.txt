@@ -1,0 +1,10 @@
+C:\Users\User\Desktop\Kitts Things 1-1\Personal\Projects\Working\Binary Helper\Binary Helper\bin\Debug\Binary Helper.exe.config
+C:\Users\User\Desktop\Kitts Things 1-1\Personal\Projects\Working\Binary Helper\Binary Helper\bin\Debug\Binary Helper.exe
+C:\Users\User\Desktop\Kitts Things 1-1\Personal\Projects\Working\Binary Helper\Binary Helper\bin\Debug\Binary Helper.pdb
+C:\Users\User\Desktop\Kitts Things 1-1\Personal\Projects\Working\Binary Helper\Binary Helper\obj\Debug\Binary Helper.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Kitts Things 1-1\Personal\Projects\Working\Binary Helper\Binary Helper\obj\Debug\Binary_Helper.Form1.resources
+C:\Users\User\Desktop\Kitts Things 1-1\Personal\Projects\Working\Binary Helper\Binary Helper\obj\Debug\Binary_Helper.Properties.Resources.resources
+C:\Users\User\Desktop\Kitts Things 1-1\Personal\Projects\Working\Binary Helper\Binary Helper\obj\Debug\Binary Helper.csproj.GenerateResource.cache
+C:\Users\User\Desktop\Kitts Things 1-1\Personal\Projects\Working\Binary Helper\Binary Helper\obj\Debug\Binary Helper.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Kitts Things 1-1\Personal\Projects\Working\Binary Helper\Binary Helper\obj\Debug\Binary Helper.exe
+C:\Users\User\Desktop\Kitts Things 1-1\Personal\Projects\Working\Binary Helper\Binary Helper\obj\Debug\Binary Helper.pdb

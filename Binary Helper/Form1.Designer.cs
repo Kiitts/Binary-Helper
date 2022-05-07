@@ -42,11 +42,16 @@ namespace Binary_Helper
             // 
             // fromConvertList
             // 
+            this.fromConvertList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.fromConvertList.FormattingEnabled = true;
+            this.fromConvertList.Items.AddRange(new object[] {
+            "Text",
+            "Binary"});
             this.fromConvertList.Location = new System.Drawing.Point(12, 12);
             this.fromConvertList.Name = "fromConvertList";
             this.fromConvertList.Size = new System.Drawing.Size(344, 21);
             this.fromConvertList.TabIndex = 0;
+            this.fromConvertList.SelectedIndexChanged += new System.EventHandler(this.fromConvertList_SelectedIndexChanged);
             // 
             // fromConvertText
             // 
@@ -61,16 +66,22 @@ namespace Binary_Helper
             this.toConvertText.Location = new System.Drawing.Point(13, 262);
             this.toConvertText.Multiline = true;
             this.toConvertText.Name = "toConvertText";
+            this.toConvertText.ReadOnly = true;
             this.toConvertText.Size = new System.Drawing.Size(424, 188);
             this.toConvertText.TabIndex = 3;
             // 
             // toConvertList
             // 
+            this.toConvertList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.toConvertList.FormattingEnabled = true;
+            this.toConvertList.Items.AddRange(new object[] {
+            "Text",
+            "Binary"});
             this.toConvertList.Location = new System.Drawing.Point(12, 234);
             this.toConvertList.Name = "toConvertList";
             this.toConvertList.Size = new System.Drawing.Size(344, 21);
             this.toConvertList.TabIndex = 2;
+            this.toConvertList.SelectedIndexChanged += new System.EventHandler(this.toConvertList_SelectedIndexChanged);
             // 
             // fromClearButton
             // 
@@ -80,6 +91,7 @@ namespace Binary_Helper
             this.fromClearButton.TabIndex = 4;
             this.fromClearButton.Text = "Clear";
             this.fromClearButton.UseVisualStyleBackColor = true;
+            this.fromClearButton.Click += new System.EventHandler(this.fromClearButton_Click);
             // 
             // toClearButton
             // 
@@ -89,6 +101,7 @@ namespace Binary_Helper
             this.toClearButton.TabIndex = 5;
             this.toClearButton.Text = "Clear";
             this.toClearButton.UseVisualStyleBackColor = true;
+            this.toClearButton.Click += new System.EventHandler(this.toClearButton_Click);
             // 
             // clearAllButton
             // 
@@ -98,6 +111,7 @@ namespace Binary_Helper
             this.clearAllButton.TabIndex = 6;
             this.clearAllButton.Text = "Clear All";
             this.clearAllButton.UseVisualStyleBackColor = true;
+            this.clearAllButton.Click += new System.EventHandler(this.clearAllButton_Click);
             // 
             // convertButton
             // 
@@ -116,6 +130,7 @@ namespace Binary_Helper
             this.copyButton.TabIndex = 8;
             this.copyButton.Text = "Copy Clipboard";
             this.copyButton.UseVisualStyleBackColor = true;
+            this.copyButton.Click += new System.EventHandler(this.copyButton_Click);
             // 
             // Form1
             // 
@@ -139,6 +154,7 @@ namespace Binary_Helper
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Binary Helper";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
