@@ -121,6 +121,7 @@ namespace Binary_Helper
             this.convertButton.TabIndex = 7;
             this.convertButton.Text = "Convert";
             this.convertButton.UseVisualStyleBackColor = true;
+            this.convertButton.Click += new System.EventHandler(this.convertButton_Click);
             // 
             // copyButton
             // 

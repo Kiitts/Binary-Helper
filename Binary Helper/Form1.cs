@@ -59,6 +59,8 @@ namespace Binary_Helper
             {
                 toConvertList.SelectedIndex = lastFromSelected;
             }
+            fromConvertText.Text = "";
+            toConvertText.Text = "";
             lastFromSelected = fromConvertList.SelectedIndex;
         }
 
@@ -68,9 +70,25 @@ namespace Binary_Helper
             {
                 fromConvertList.SelectedIndex = lastToSelected;
             }
+            fromConvertText.Text = "";
+            toConvertText.Text = "";
             lastToSelected = toConvertList.SelectedIndex;
         }
         // End of Combo Box functions
+
+        // Start of Convert Button
+        private void convertButton_Click(object sender, EventArgs e)
+        {
+            if (fromConvertList.SelectedIndex == 0 && toConvertList.SelectedIndex == 1)
+            {
+                toConvertText.Text = converter.TextToBin(fromConvertText.Text);
+            }
+            else if (fromConvertList.SelectedIndex == 1 && toConvertList.SelectedIndex == 0)
+            {
+                toConvertText.Text = converter.BinToText(fromConvertText.Text);
+            }
+        }
+        // End of Convert Button
 
     }
 }
