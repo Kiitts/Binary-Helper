@@ -15,6 +15,7 @@ namespace Binary_Helper
         Converter converter = new Converter();
         public int lastToSelected = 1;
         public int lastFromSelected = 0;
+        public bool recentChange = false;
 
         public Form1()
         {
@@ -40,9 +41,15 @@ namespace Binary_Helper
 
         private void clearAllButton_Click(object sender, EventArgs e)
         {
+            ClearTexts();
+        }
+            // Start Clear Buttons: Support function
+        private void ClearTexts()
+        {
             fromConvertText.Text = "";
             toConvertText.Text = "";
         }
+            // End Clear Buttons: Support function
         // End of Clear Buttons
 
         // Start of Copy Button
@@ -55,25 +62,63 @@ namespace Binary_Helper
         // Start of ComboBox functions
         private void fromConvertList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(toConvertList.SelectedIndex == fromConvertList.SelectedIndex)
+            if (recentChange)
             {
-                toConvertList.SelectedIndex = lastFromSelected;
+                recentChange = false;
             }
-            fromConvertText.Text = "";
-            toConvertText.Text = "";
+            else
+            {
+                if (toConvertList.SelectedIndex == fromConvertList.SelectedIndex)
+                {
+                    SwapText();
+                    toConvertList.SelectedIndex = lastFromSelected;
+                }
+                else
+                {
+                    ClearTexts();
+                }
+            }
             lastFromSelected = fromConvertList.SelectedIndex;
         }
 
         private void toConvertList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (toConvertList.SelectedIndex == fromConvertList.SelectedIndex)
+            if (recentChange)
             {
-                fromConvertList.SelectedIndex = lastToSelected;
+                recentChange = false;
             }
-            fromConvertText.Text = "";
-            toConvertText.Text = "";
+            else
+            {
+                if (toConvertList.SelectedIndex == fromConvertList.SelectedIndex)
+                {
+                    SwapText();
+                    fromConvertList.SelectedIndex = lastToSelected;
+                }
+                else
+                {
+                    ClearTexts();
+                }
+            }
             lastToSelected = toConvertList.SelectedIndex;
         }
+
+            // Start Convert Button: Supporting Function
+        private void SwapText()
+        {
+            recentChange = true;
+            if (toConvertText.Text.Length != 0 && fromConvertText.Text.Length != 0)
+            {
+                string textHolder = fromConvertText.Text.ToString();
+                fromConvertText.Text = toConvertText.Text;
+                toConvertText.Text = textHolder;
+            }
+            else
+            {
+                ClearTexts();
+            }
+        }
+            // End Convert Button: Supporting Function
+
         // End of Combo Box functions
 
         // Start of Convert Button
