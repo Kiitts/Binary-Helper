@@ -85,7 +85,20 @@ namespace Binary_Helper
             }
             else if (fromConvertList.SelectedIndex == 1 && toConvertList.SelectedIndex == 0)
             {
-                toConvertText.Text = converter.BinToText(fromConvertText.Text);
+                try
+                {
+                    toConvertText.Text = converter.BinToText(fromConvertText.Text);
+                }
+                catch(System.ArgumentOutOfRangeException)
+                {
+                    MessageBox.Show("You did not input proper binary.", "Error Box");
+                    fromConvertText.Text = "";
+                }
+                catch(System.FormatException)
+                {
+                    MessageBox.Show("Your binary has a letter or other number other than 1 and 0",
+                        "Error Box");
+                }
             }
         }
         // End of Convert Button
