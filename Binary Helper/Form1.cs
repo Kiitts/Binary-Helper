@@ -62,13 +62,13 @@ namespace Binary_Helper
         // Start of ComboBox functions
         private void fromConvertList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (recentChange)
+            if(recentChange)
             {
                 recentChange = false;
             }
             else
             {
-                if (toConvertList.SelectedIndex == fromConvertList.SelectedIndex)
+                if(toConvertList.SelectedIndex == fromConvertList.SelectedIndex)
                 {
                     SwapText();
                     toConvertList.SelectedIndex = lastFromSelected;
@@ -83,13 +83,13 @@ namespace Binary_Helper
 
         private void toConvertList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (recentChange)
+            if(recentChange)
             {
                 recentChange = false;
             }
             else
             {
-                if (toConvertList.SelectedIndex == fromConvertList.SelectedIndex)
+                if(toConvertList.SelectedIndex == fromConvertList.SelectedIndex)
                 {
                     SwapText();
                     fromConvertList.SelectedIndex = lastToSelected;
@@ -106,7 +106,7 @@ namespace Binary_Helper
         private void SwapText()
         {
             recentChange = true;
-            if (toConvertText.Text.Length != 0 && fromConvertText.Text.Length != 0)
+            if(toConvertText.Text.Length != 0 && fromConvertText.Text.Length != 0)
             {
                 string textHolder = fromConvertText.Text.ToString();
                 fromConvertText.Text = toConvertText.Text;
@@ -124,17 +124,17 @@ namespace Binary_Helper
         // Start of Convert Button
         private void convertButton_Click(object sender, EventArgs e)
         {
-            if (fromConvertList.SelectedIndex == 0 && toConvertList.SelectedIndex == 1)
+            if(fromConvertList.SelectedIndex == 0 && toConvertList.SelectedIndex == 1)
             {
                 // convert text to binary
                 toConvertText.Text = converter.TextToBin(fromConvertText.Text, 2);
             }
-            else if (fromConvertList.SelectedIndex == 0 && toConvertList.SelectedIndex == 2)
+            else if(fromConvertList.SelectedIndex == 0 && toConvertList.SelectedIndex == 2)
             {
                 // convert text to octal
                 toConvertText.Text = converter.TextToBin(fromConvertText.Text, 8, 3);
             }
-            else if (fromConvertList.SelectedIndex == 1 && toConvertList.SelectedIndex == 0)
+            else if(fromConvertList.SelectedIndex == 1 && toConvertList.SelectedIndex == 0)
             {
                 // convert binary to text
                 try
@@ -152,8 +152,9 @@ namespace Binary_Helper
                         "Error Box");
                 }
             }
-            else if (fromConvertList.SelectedIndex == 2 && toConvertList.SelectedIndex == 0)
+            else if(fromConvertList.SelectedIndex == 2 && toConvertList.SelectedIndex == 0)
             {
+                // convert octal to text
                 try
                 {
                     toConvertText.Text = converter.BinToText(fromConvertText.Text, 8, 3);
@@ -165,7 +166,45 @@ namespace Binary_Helper
                 }
                 catch (System.FormatException)
                 {
-                    MessageBox.Show("Your octal number has exceed 8 or it has letter on it",
+                    MessageBox.Show("Your octal number has exceed 7 or it has letter on it",
+                        "Error Box");
+                }
+            }
+            else if(fromConvertList.SelectedIndex == 2 && toConvertList.SelectedIndex == 1)
+            {
+                // convert octal to binary
+                try
+                {
+                    toConvertText.Text = converter.NumberSytemConvert(fromConvertText.Text,
+                        8, 2, 3, 8);
+                }
+                catch (System.ArgumentOutOfRangeException)
+                {
+                    MessageBox.Show("You did not input proper octal.", "Error Box");
+                    fromConvertText.Text = "";
+                }
+                catch (System.FormatException)
+                {
+                    MessageBox.Show("Your octal number has exceed 7 or it has letter on it",
+                        "Error Box");
+                }
+            }
+            else if(fromConvertList.SelectedIndex == 1 && toConvertList.SelectedIndex == 2)
+            {
+                // convert binary to octal
+                try
+                {
+                    toConvertText.Text = converter.NumberSytemConvert(fromConvertText.Text,
+                        2, 8, 8, 3);
+                }
+                catch (System.ArgumentOutOfRangeException)
+                {
+                    MessageBox.Show("You did not input proper binary.", "Error Box");
+                    fromConvertText.Text = "";
+                }
+                catch (System.FormatException)
+                {
+                    MessageBox.Show("Your binary has a letter or other number other than 1 and 0",
                         "Error Box");
                 }
             }

@@ -16,11 +16,10 @@ namespace Binary_Helper
         /// This will convert any string text to binary, octal, hexadecimal
         /// </summary>
         /// <param name="text">this is the text that will be converted</param>
-        /// <param name="toBase">this will define if what output the user want
+        /// <param name="toBase">what number system output user want</param>
         /// <param name="padLength">fill the resulting output with a 0 to the left if
-        /// the length of the result is not equal to pad length and equalize it
+        /// the length of the result is not equal to pad length and equalize it.
         /// default value is 8 for binary</param>
-        /// if he want a binary, octal, or hexadecimal</param>
         /// <returns>the converted text to defined output</returns>
         public string TextToBin(string text, int toBase, int padLength = 8)
         {
@@ -37,10 +36,9 @@ namespace Binary_Helper
         /// convert binary, octal, or hexadecimal to text
         /// </summary>
         /// <param name="data">the data that will be converted to text</param>
-        /// <param name="fromBase">from what base the data came from so that it can be
-        /// converted</param>
+        /// <param name="fromBase">what is the data number system</param>
         /// <param name="increment">increment of for loop so it will know where to break
-        /// the given data for convertion default value is 8</param>
+        /// the given data for convertion, default value is 8</param>
         /// <returns>string of binary, octal, or hexadecimal depending on the user</returns>
         public string BinToText(string data, int fromBase, int increment = 8)
         {
@@ -51,6 +49,25 @@ namespace Binary_Helper
                 byteList.Add(Convert.ToByte(data.Substring(i, increment), fromBase));
             }
             return Encoding.ASCII.GetString(byteList.ToArray());
+        }
+
+        /// <summary>
+        /// Convert other number system other than decimal to other number system other than
+        /// decimal
+        /// </summary>
+        /// <param name="data">data to convert</param>
+        /// <param name="fromBase">what is the data number system</param>
+        /// <param name="toBase">what number system output user want</param>
+        /// <param name="increment">increment of for loop so it will know where to break
+        /// the given data for convertion, default value is 8</param>
+        /// <param name="padLength">fill the resulting output with a 0 to the left if
+        /// the length of the result is not equal to pad length and equalize it.
+        /// default value is 8 for binary</param>
+        /// <returns>string of number system he want the data to be converted with</returns>
+        public string NumberSytemConvert(string data, int fromBase, int toBase,
+            int increment = 8, int padLength = 8)
+        {
+            return TextToBin(BinToText(data, fromBase, increment), toBase, padLength);
         }
     }
 
