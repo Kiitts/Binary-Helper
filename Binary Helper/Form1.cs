@@ -126,13 +126,20 @@ namespace Binary_Helper
         {
             if (fromConvertList.SelectedIndex == 0 && toConvertList.SelectedIndex == 1)
             {
-                toConvertText.Text = converter.TextToBin(fromConvertText.Text);
+                // convert text to binary
+                toConvertText.Text = converter.TextToBin(fromConvertText.Text, 2);
+            }
+            else if (fromConvertList.SelectedIndex == 0 && toConvertList.SelectedIndex == 2)
+            {
+                // convert text to octal
+                toConvertText.Text = converter.TextToBin(fromConvertText.Text, 8, 3);
             }
             else if (fromConvertList.SelectedIndex == 1 && toConvertList.SelectedIndex == 0)
             {
+                // convert binary to text
                 try
                 {
-                    toConvertText.Text = converter.BinToText(fromConvertText.Text);
+                    toConvertText.Text = converter.BinToText(fromConvertText.Text, 2);
                 }
                 catch(System.ArgumentOutOfRangeException)
                 {
@@ -142,6 +149,23 @@ namespace Binary_Helper
                 catch(System.FormatException)
                 {
                     MessageBox.Show("Your binary has a letter or other number other than 1 and 0",
+                        "Error Box");
+                }
+            }
+            else if (fromConvertList.SelectedIndex == 2 && toConvertList.SelectedIndex == 0)
+            {
+                try
+                {
+                    toConvertText.Text = converter.BinToText(fromConvertText.Text, 8, 3);
+                }
+                catch (System.ArgumentOutOfRangeException)
+                {
+                    MessageBox.Show("You did not input proper octal.", "Error Box");
+                    fromConvertText.Text = "";
+                }
+                catch (System.FormatException)
+                {
+                    MessageBox.Show("Your octal number has exceed 8 or it has letter on it",
                         "Error Box");
                 }
             }

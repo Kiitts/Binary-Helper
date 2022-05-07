@@ -46,7 +46,8 @@ namespace Binary_Helper
             this.fromConvertList.FormattingEnabled = true;
             this.fromConvertList.Items.AddRange(new object[] {
             "Text",
-            "Binary"});
+            "Binary",
+            "Octal"});
             this.fromConvertList.Location = new System.Drawing.Point(12, 12);
             this.fromConvertList.Name = "fromConvertList";
             this.fromConvertList.Size = new System.Drawing.Size(344, 21);
@@ -78,7 +79,8 @@ namespace Binary_Helper
             this.toConvertList.FormattingEnabled = true;
             this.toConvertList.Items.AddRange(new object[] {
             "Text",
-            "Binary"});
+            "Binary",
+            "Octal"});
             this.toConvertList.Location = new System.Drawing.Point(12, 234);
             this.toConvertList.Name = "toConvertList";
             this.toConvertList.Size = new System.Drawing.Size(344, 21);
