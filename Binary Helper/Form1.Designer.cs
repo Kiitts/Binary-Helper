@@ -111,7 +111,7 @@ namespace Binary_Helper
             // 
             // clearAllButton
             // 
-            this.clearAllButton.Location = new System.Drawing.Point(13, 456);
+            this.clearAllButton.Location = new System.Drawing.Point(12, 456);
             this.clearAllButton.Name = "clearAllButton";
             this.clearAllButton.Size = new System.Drawing.Size(75, 23);
             this.clearAllButton.TabIndex = 6;
@@ -121,7 +121,7 @@ namespace Binary_Helper
             // 
             // convertButton
             // 
-            this.convertButton.Location = new System.Drawing.Point(182, 456);
+            this.convertButton.Location = new System.Drawing.Point(165, 456);
             this.convertButton.Name = "convertButton";
             this.convertButton.Size = new System.Drawing.Size(75, 23);
             this.convertButton.TabIndex = 7;
@@ -131,7 +131,7 @@ namespace Binary_Helper
             // 
             // copyButton
             // 
-            this.copyButton.Location = new System.Drawing.Point(345, 456);
+            this.copyButton.Location = new System.Drawing.Point(345, 449);
             this.copyButton.Name = "copyButton";
             this.copyButton.Size = new System.Drawing.Size(92, 23);
             this.copyButton.TabIndex = 8;
