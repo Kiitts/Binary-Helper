@@ -29,6 +29,7 @@ namespace Binary_Helper
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.fromConvertList = new System.Windows.Forms.ComboBox();
             this.fromConvertText = new System.Windows.Forms.TextBox();
             this.toConvertText = new System.Windows.Forms.TextBox();
@@ -154,6 +155,7 @@ namespace Binary_Helper
             this.Controls.Add(this.toConvertList);
             this.Controls.Add(this.fromConvertText);
             this.Controls.Add(this.fromConvertList);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(465, 528);
             this.MinimizeBox = false;
