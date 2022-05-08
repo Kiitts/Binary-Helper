@@ -5,5 +5,5 @@ This will also help you decrypt binary, octal, or hexadecimal encryption. This i
 Check my website for software updates 
 https://jawares.blogspot.com
 
-Donating will help me and inspire me to make a good, better, and free software! Consider Donating!
+Donating will help me and inspire me to make a good, better, and free software! Consider Donating
 https://www.paypal.com/donate/?hosted_button_id=DAY3XBK2372EG
