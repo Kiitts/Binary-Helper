@@ -133,17 +133,20 @@ namespace Binary_Helper
             if(fromConvertList.SelectedIndex == 0 && toConvertList.SelectedIndex == 1)
             {
                 // convert text to binary
-                toConvertText.Text = converter.TextToBin(fromConvertText.Text, 2);
+                toConvertText.Text = converter.TextToBin(fromConvertText.Text, 2,
+                    removeSpaceCheckBox.Checked);
             }
             else if(fromConvertList.SelectedIndex == 0 && toConvertList.SelectedIndex == 2)
             {
                 // convert text to octal
-                toConvertText.Text = converter.TextToBin(fromConvertText.Text, 8, 3);
+                toConvertText.Text = converter.TextToBin(fromConvertText.Text, 8,
+                    removeSpaceCheckBox.Checked, 3);
             }
             else if (fromConvertList.SelectedIndex == 0 && toConvertList.SelectedIndex == 3)
             {
                 // convert text to hexadecimal
-                toConvertText.Text = converter.TextToBin(fromConvertText.Text, 16, 2);
+                toConvertText.Text = converter.TextToBin(fromConvertText.Text, 16,
+                    removeSpaceCheckBox.Checked, 2);
             }
             else if(fromConvertList.SelectedIndex == 1 && toConvertList.SelectedIndex == 0)
             {

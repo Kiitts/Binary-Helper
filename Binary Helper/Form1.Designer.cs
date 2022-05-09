@@ -39,6 +39,7 @@ namespace Binary_Helper
             this.clearAllButton = new System.Windows.Forms.Button();
             this.convertButton = new System.Windows.Forms.Button();
             this.copyButton = new System.Windows.Forms.Button();
+            this.removeSpaceCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // fromConvertList
@@ -122,7 +123,7 @@ namespace Binary_Helper
             // 
             // convertButton
             // 
-            this.convertButton.Location = new System.Drawing.Point(165, 456);
+            this.convertButton.Location = new System.Drawing.Point(124, 456);
             this.convertButton.Name = "convertButton";
             this.convertButton.Size = new System.Drawing.Size(75, 23);
             this.convertButton.TabIndex = 7;
@@ -140,12 +141,23 @@ namespace Binary_Helper
             this.copyButton.UseVisualStyleBackColor = true;
             this.copyButton.Click += new System.EventHandler(this.copyButton_Click);
             // 
+            // removeSpaceCheckBox
+            // 
+            this.removeSpaceCheckBox.AutoSize = true;
+            this.removeSpaceCheckBox.Location = new System.Drawing.Point(219, 460);
+            this.removeSpaceCheckBox.Name = "removeSpaceCheckBox";
+            this.removeSpaceCheckBox.Size = new System.Drawing.Size(100, 17);
+            this.removeSpaceCheckBox.TabIndex = 9;
+            this.removeSpaceCheckBox.Text = "Remove Space";
+            this.removeSpaceCheckBox.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(449, 489);
+            this.Controls.Add(this.removeSpaceCheckBox);
             this.Controls.Add(this.copyButton);
             this.Controls.Add(this.convertButton);
             this.Controls.Add(this.clearAllButton);
@@ -180,6 +192,7 @@ namespace Binary_Helper
         private System.Windows.Forms.Button clearAllButton;
         private System.Windows.Forms.Button convertButton;
         private System.Windows.Forms.Button copyButton;
+        private System.Windows.Forms.CheckBox removeSpaceCheckBox;
     }
 }
 

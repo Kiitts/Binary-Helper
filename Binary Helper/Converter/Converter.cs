@@ -20,14 +20,21 @@ namespace Binary_Helper
         /// <param name="padLength">fill the resulting output with a 0 to the left if
         /// the length of the result is not equal to pad length and equalize it.
         /// default value is 8 for binary</param>
+        /// <param name="removeWhiteSpace">Check if the user wants the output of binary,
+        /// octal, or hexadecimal is with or without whitespace</param>
         /// <returns>the converted text to defined output</returns>
-        public string TextToBin(string text, int toBase, int padLength = 8)
+        public string TextToBin(string text, int toBase, bool removeWhiteSpace,
+            int padLength = 8)
         {
             // Convert Text to Binary
             string result = "";
             foreach(char letter in text)
             {
-                result += Convert.ToString(letter, toBase).PadLeft(padLength, '0')+" ";
+                result += Convert.ToString(letter, toBase).PadLeft(padLength, '0');
+                if (!removeWhiteSpace)
+                {
+                    result += ' ';
+                }
             }
             return result;
         }
@@ -63,11 +70,14 @@ namespace Binary_Helper
         /// <param name="padLength">fill the resulting output with a 0 to the left if
         /// the length of the result is not equal to pad length and equalize it.
         /// default value is 8 for binary</param>
+        /// <param name="removeWhiteSpace">Check if the user wants the output of binary,
+        /// octal, or hexadecimal is with or without whitespace</param>
         /// <returns>string of number system he want the data to be converted with</returns>
         public string NumberSytemConvert(string data, int fromBase, int toBase,
-            int increment = 8, int padLength = 8)
+            int increment = 8, int padLength = 8, bool removeWhiteSpace = false)
         {
-            return TextToBin(BinToText(data, fromBase, increment), toBase, padLength);
+            return TextToBin(BinToText(data, fromBase, increment), toBase, removeWhiteSpace,
+                padLength);
         }
     }
 
