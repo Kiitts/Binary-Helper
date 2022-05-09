@@ -1,4 +1,4 @@
-# Binary-Helper
+# Binary-Helper v1.1
 This software will help you convert text, binary, octal, and hexadecimal. This is useful encrypting your text and ensuring safety of the content of the text. 
 This will also help you decrypt binary, octal, or hexadecimal encryption. This is a user-friendly software that is easy to use and no more other setup to use.
 
