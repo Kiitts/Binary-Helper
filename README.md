@@ -9,7 +9,7 @@ Donating will help me and inspire me to make a good, better, and free software! 
 https://www.paypal.com/donate/?hosted_button_id=DAY3XBK2372EG
 
 <details>
-  <summary>Changelogs. Current Version is v1.0</summary>
+  <summary>Changelogs. Current Version is v1.1</summary>
   Binary Helper v1.1:<br>
     - Added checkbox to let the user choose whether they want the output of
     binary, octal, and hexadecimal is with or without the whitespace.<br><br>
