@@ -10,11 +10,11 @@ https://www.paypal.com/donate/?hosted_button_id=DAY3XBK2372EG
 
 <details>
   <summary>Changelogs. Current Version is v1.0</summary>
-  Binary Helper v1.0:
-    - Convert text to binary, octal, hexadecimal, and vice versa.
-    - Convert binary to octal, hexadecimal, and vice versa.
-    - Convert hexadecimal to octal, and vice versa.
-    - Clear all buttons will clear all inputs and output
-    - Input and output has a clear button
-    - Copy Clipboard button will copy the output
+  Binary Helper v1.0:<br>
+    - Convert text to binary, octal, hexadecimal, and vice versa.<br>
+    - Convert binary to octal, hexadecimal, and vice versa.<br>
+    - Convert hexadecimal to octal, and vice versa.<br>
+    - Clear all buttons will clear all inputs and output<br>
+    - Input and output has a clear button<br>
+    - Copy Clipboard button will copy the output<br>
 </details>
